@@ -23,3 +23,9 @@ D:\IPD\VisualBasic_CSharpDotNet\LocalProjects\Bank\Bank\obj\Debug\Login.g.cs
 D:\IPD\VisualBasic_CSharpDotNet\LocalProjects\Bank\Bank\obj\Debug\Login.baml
 D:\IPD\VisualBasic_CSharpDotNet\LocalProjects\Bank\Bank\obj\Debug\Bank.Migrations.TestUserAccountSwitchPropertyToObject.resources
 D:\IPD\VisualBasic_CSharpDotNet\LocalProjects\Bank\Bank\obj\Debug\Bank.Migrations.TestInitializeUserAccountInConstructor.resources
+D:\IPD\VisualBasic_CSharpDotNet\LocalProjects\Bank\Bank\obj\Debug\AdminWindow.g.cs
+D:\IPD\VisualBasic_CSharpDotNet\LocalProjects\Bank\Bank\obj\Debug\AdminWindow.baml
+D:\IPD\VisualBasic_CSharpDotNet\LocalProjects\Bank\Bank\obj\Debug\CreateUserForm.g.cs
+D:\IPD\VisualBasic_CSharpDotNet\LocalProjects\Bank\Bank\obj\Debug\CreateUserForm.baml
+D:\IPD\VisualBasic_CSharpDotNet\LocalProjects\Bank\Bank\obj\Debug\UpdateUserForm.g.cs
+D:\IPD\VisualBasic_CSharpDotNet\LocalProjects\Bank\Bank\obj\Debug\UpdateUserForm.baml

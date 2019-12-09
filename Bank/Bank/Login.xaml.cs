@@ -19,6 +19,9 @@ namespace Bank {
     /// </summary>
     public partial class Login : Window {
         private BankRepository repo = new BankRepository();
+        AdminWindow adminWindow;
+        User user;
+        private const int ADMIN_ID = 7;
 
         public Login()
         {
@@ -27,9 +30,10 @@ namespace Bank {
         }
 
         private void BtnLoginWindow_Click(object sender, RoutedEventArgs e)
-        {
+        {   
+            
             //Check if input is empty
-            if(!(string.IsNullOrEmpty(txtBoxID.Text) && string.IsNullOrEmpty(txtBoxPassword.Text)))
+            if(!(string.IsNullOrEmpty(txtBoxID.Text) && string.IsNullOrEmpty(pwdPassword.Password)))
             {
                 int tempID;
 
@@ -41,12 +45,22 @@ namespace Bank {
                 }
                 else
                 {
-                    User user = repo.VerifyLogin(tempID, txtBoxPassword.Text);
-                    
                     //Check if User exists based on ID and password provided
+                    user = repo.VerifyLogin(tempID, pwdPassword.Password);
+                    
                     if (user == null)
                     {
                         MessageBox.Show("Error: Username or password mismatch!");
+                        txtBoxID.Clear();
+                        pwdPassword.Clear();
+                    }
+
+                    //If Admin ID provided, Open admin window
+                    else if (user.ID == ADMIN_ID)
+                    {
+                        adminWindow = new AdminWindow();
+                        adminWindow.ShowDialog();
+                        this.Close();
                     }
                     else
                     {

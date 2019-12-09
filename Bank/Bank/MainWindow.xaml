@@ -44,7 +44,7 @@
             <Button x:Name="btnDeposit" Content="Deposit" Grid.Column="0" Grid.Row="0" Margin="0,0,5,0" IsEnabled="False" Click="BtnDeposit_Click"/>
             <Button x:Name="btnWithdraw" Content="Withdraw" Grid.Column="1" Grid.Row="0" Margin="5,0,0,0" IsEnabled="False" Click="BtnWithdraw_Click"/>
             <Button x:Name="btnLogin" Content="Login" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Margin="0,5,0,0" Click="BtnLogin_Click"/>
-            <Button x:Name="btnLogout" Content="Logout" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Margin="0,5,0,0" Visibility="Hidden" />
+            <Button x:Name="btnLogout" Content="Logout" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Margin="0,5,0,0" Visibility="Hidden" Click="BtnLogout_Click" />
         </Grid>
     </StackPanel>
     

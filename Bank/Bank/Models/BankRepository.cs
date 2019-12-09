@@ -12,7 +12,7 @@ namespace Bank.Models {
         public User VerifyLogin(int ID, string password)
         {
             return (from u in context.Users
-                    where u.ID == ID
+                    where u.ID == ID && u.Password == password
                     select u).SingleOrDefault();
         }
 
@@ -27,7 +27,12 @@ namespace Bank.Models {
         //public double DepositAmount(User user, double amount)
         //{
             
-            
+          public Account GetUserAccount(int ID)
+        {
+            return (from u in context.Users
+                    where u.ID == ID
+                    select u.UserAccount).SingleOrDefault();
+        }
             
             
         //}
@@ -40,6 +45,28 @@ namespace Bank.Models {
             currentUser.Password = user.Password;
             currentUser.UserAccount = user.UserAccount;
 
+            context.SaveChanges();
+        }
+
+        public List<User> GetAllUsers()
+        {
+            return context.Users.Include("UserAccount").ToList();  
+        }
+
+        public void AddNewUser(User newUser)
+        {
+            context.Users.Add(newUser);
+            context.SaveChanges();
+        }
+
+        public void DeleteUser(int ID)
+        {
+            User userToDelete = GetUserInfo(ID);
+
+            Account accountToDelete = userToDelete.UserAccount;
+
+            context.Users.Remove(userToDelete);
+            context.Accounts.Remove(accountToDelete);
             context.SaveChanges();
         }
     }

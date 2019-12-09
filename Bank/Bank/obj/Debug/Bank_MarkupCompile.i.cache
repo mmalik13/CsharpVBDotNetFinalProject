@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\IPD\VisualBasic_CSharpDotNet\LocalProjects\Bank\Bank\App.xaml
-2-419086188
+51315782898
 
-21-383240261
+24-983227043
 16-1917804069
-Login.xaml;MainWindow.xaml;
+AdminWindow.xaml;CreateUserForm.xaml;Login.xaml;MainWindow.xaml;UpdateUserForm.xaml;
 
-False
+True
 
